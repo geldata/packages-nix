@@ -8,6 +8,7 @@
 
 import requests
 from typing import Tuple, Any, Callable
+import sys
 
 def main():
     platforms = [
@@ -19,12 +20,12 @@ def main():
 
     r = "{\n"
     
-    r += "  edgedb-server = {\n"
-    r += generate_artifacts("edgedb-server", "", platforms)
+    r += "  gel-server = {\n"
+    r += generate_artifacts("gel-server", "", platforms)
     r += "  };\n"
     
-    r += "  edgedb-server-nightly = {\n"
-    r += generate_artifacts("edgedb-server", ".nightly", platforms)
+    r += "  gel-server-nightly = {\n"
+    r += generate_artifacts("gel-server", ".nightly", platforms)
     r += "  };\n"
     
     r += "  gel-server-testing= {\n"
@@ -45,20 +46,14 @@ def find_most_recent(basename, packages) -> Tuple[int, int, int]:
         if p["basename"] != basename:
             continue
 
-        if p["version_details"]["major"] > major:
-            major = p["version_details"]["major"]
-            minor = 0
-            revision = 0
-
-        if p["version_details"]["minor"] > minor:
-            minor = p["version_details"]["minor"]
-            revision = 0
-
+        maj = p["version_details"]["major"]
+        mi = p["version_details"]["minor"]
+        rev = 0
         if r_str := p["version_details"]["metadata"].get("build_revision", None):
-            r = int(r_str)
-            if r > revision:
-                revision = r
-    return (major, minor, revision)
+            rev = int(r_str)      
+        if (major, minor, revision) < (maj, mi, rev):
+            major, minor, revision = maj, mi, rev
+    return major, minor, revision
 
 
 def package_selector(basename, version) -> Callable[[Any], bool]:
@@ -67,7 +62,7 @@ def package_selector(basename, version) -> Callable[[Any], bool]:
             p["basename"] == basename
             and p["version_details"]["major"] == version[0]
             and p["version_details"]["minor"] == version[1]
-            and p["version_details"]["metadata"].get("build_revision", None) == str(version[2])
+            and p["version_details"]["metadata"].get("build_revision", "0") == str(version[2])
         )
 
     return sel
