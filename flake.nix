@@ -3,11 +3,7 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs";
     flake-parts.url = "github:hercules-ci/flake-parts";
-
-    crane = {
-      url = "github:ipetkov/crane";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    crane.url = "github:ipetkov/crane";
   };
 
   outputs =
@@ -34,7 +30,7 @@
             { name, url }:
             pkgs.stdenvNoCC.mkDerivation {
               name = name;
-              buildInputs = with pkgs; [ ];
+              buildInputs = [ ];
               nativeBuildInputs =
                 with pkgs;
                 [ zstd ] ++ lib.optionals (!pkgs.stdenv.isDarwin) [ autoPatchelfHook ];
