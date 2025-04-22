@@ -79,13 +79,13 @@
           artifacts = import ./artifacts.nix;
         in
         {
-          packages.edgedb-server = mk_artifact {
-            name = "edgedb-server";
+          packages.gel-server = mk_artifact {
+            name = "gel-server";
             url = artifacts.edgedb-server.${system};
           };
-          packages.edgedb-server-nightly = mk_artifact {
-            name = "edgedb-server";
-            url = artifacts.edgedb-server-nightly.${system};
+          packages.gel-server-nightly = mk_artifact {
+            name = "gel-server";
+            url = artifacts.gel-server-nightly.${system};
           };
           packages.gel-server-testing = mk_artifact {
             name = "gel-server";
