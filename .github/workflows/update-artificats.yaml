@@ -1,0 +1,24 @@
+on:
+  schedule:
+    - cron: "0 0 * * *"
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+      with:
+        persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
+        fetch-depth: 0
+    - uses: actions/setup-python@v5
+      with:
+        python-version: '3.13' 
+        cache: 'pip'
+    - run: pip install requests
+    
+    - name: Update artifacts.nix
+      run: python lookup_artifacts.py > artifacts.nix
+
+    - name: Commit & Push changes
+      uses: actions-js/push@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
