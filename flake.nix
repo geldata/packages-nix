@@ -81,7 +81,7 @@
         {
           packages.gel-server = mk_artifact {
             name = "gel-server";
-            url = artifacts.edgedb-server.${system};
+            url = artifacts.gel-server.${system};
           };
           packages.gel-server-nightly = mk_artifact {
             name = "gel-server";
