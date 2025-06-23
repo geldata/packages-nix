@@ -7,7 +7,7 @@ Currently provides:
 - gel-server-nightly
 - gel-server-testing
 - gel-ls
-- edgedb-cli
+- gel-cli
 
 
 To download any of these, use the following command:

@@ -44,7 +44,7 @@
               '';
             };
 
-          mk_edgedb_cli =
+          mk_gel_cli =
             { source }:
             (
               let
@@ -53,7 +53,7 @@
                 craneLib = crane.mkLib pkgs;
 
                 commonArgs = {
-                  src = craneLib.cleanCargoSource (pkgs.fetchgit source);
+                  src = pkgs.fetchgit source;
                   strictDeps = true;
 
                   nativeBuildInputs = [ pkgs.pkg-config ];
@@ -67,7 +67,7 @@
 
                   # don't check as we rely on GitHub Action tests for correctness
                   # running clippy and tests here would require:
-                  # - starting edgedb-server,
+                  # - starting gel-server,
                   # - cloning shared-client-testcases git submodule, so shared-client-test
                   #   crate can be generated
                   doCheck = false;
@@ -96,11 +96,11 @@
             url = artifacts.gel-ls.${system};
           };
 
-          packages.edgedb-cli = mk_edgedb_cli {
+          packages.gel-cli = mk_gel_cli {
             source = {
-              url = "https://github.com/edgedb/edgedb-cli";
-              rev = "v5.5.2";
-              hash = "sha256-CSs1Ql0zsGgSmZrlZIfj2pJdtAax7HUlfCq8oTbReng=";
+              url = "https://github.com/geldata/gel-cli";
+              rev = "v7.7.0";
+              hash = "sha256-A4pKkWC3x+n7PXEZlvc9wL4pa/BG7kBk1vJnyTnVyek=";
             };
           };
 
