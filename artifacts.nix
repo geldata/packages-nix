@@ -27,8 +27,8 @@
       sha256 = "be42feb04af7ae1df7765184730aa9d799007797047bbc12fd234042c0b6a4c7";
     };
     x86_64-darwin = {
-      url = "https://packages.edgedb.com/archive/x86_64-apple-darwin.nightly/gel-server-7.0-dev.9703+4e58d3a.tar.zst";
-      sha256 = "9af454eb17c5f5050988409fffa3ef732025bcdb68e8677ad36af2914817835a";
+      url = "https://packages.edgedb.com/archive/x86_64-apple-darwin.nightly/gel-server-7.0-dev.9704+af188f0.tar.zst";
+      sha256 = "246a47c3f1015223ccea4fa881942f8914702875722070c166fa649456ed5787";
     };
     aarch64-darwin = {
       url = "https://packages.edgedb.com/archive/aarch64-apple-darwin.nightly/gel-server-7.0-dev.9703+69093c7.tar.zst";
