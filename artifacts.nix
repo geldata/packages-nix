@@ -27,8 +27,8 @@
       sha256 = "65b7ff9252b6da024c43fe0ecdcd4ac74ce759e9aa199dfa8b9d8b09040cdb25";
     };
     x86_64-darwin = {
-      url = "https://packages.edgedb.com/archive/x86_64-apple-darwin.nightly/gel-server-8.0-dev.9806+fd8201c.tar.zst";
-      sha256 = "b16bf486a250f02403e0759014c513fa25448b28a3475ac49a0dc209cae3d455";
+      url = "https://packages.edgedb.com/archive/x86_64-apple-darwin.nightly/gel-server-8.0-dev.9807+270e67f.tar.zst";
+      sha256 = "53018c63fbabc595758ccb94ab273971ab632dd5083b1d55627792937e287774";
     };
     aarch64-darwin = {
       url = "https://packages.edgedb.com/archive/aarch64-apple-darwin.nightly/gel-server-8.0-dev.9806+b428f72.tar.zst";
@@ -55,20 +55,20 @@
   };
   gel-ls= {
     x86_64-linux = {
-      url = "https://packages.edgedb.com/archive/x86_64-unknown-linux-gnu.nightly/edgedb-ls-8.0-dev.9807+4a33b68.tar.zst";
-      sha256 = "3d75baf7b478be732d046b7cbadd86e322467460e8cf7dfe22d158cb1a105cf9";
+      url = "https://packages.edgedb.com/archive/x86_64-unknown-linux-gnu.nightly/edgedb-ls-8.0-dev.9807+02b99fd.tar.zst";
+      sha256 = "8a9c81e46e45b3ebe5063f2a9c64a6d0eb9702278f8b756535c85b0828b518ca";
     };
     aarch64-linux = {
-      url = "https://packages.edgedb.com/archive/aarch64-unknown-linux-gnu.nightly/edgedb-ls-8.0-dev.9807+4f1c1eb.tar.zst";
-      sha256 = "10f08f1873d3ce67a62aa9af0a240af9da104b62ab39398d7e1e18201393d435";
+      url = "https://packages.edgedb.com/archive/aarch64-unknown-linux-gnu.nightly/edgedb-ls-8.0-dev.9807+a23aedc.tar.zst";
+      sha256 = "ea23ab251a0d2bc6f601fbec8ec9e355b8cba128e4d6dfbeef2b26afa591551e";
     };
     x86_64-darwin = {
-      url = "https://packages.edgedb.com/archive/x86_64-apple-darwin.nightly/edgedb-ls-8.0-dev.9806+7b3e756.tar.zst";
-      sha256 = "4f20d53906a0b85040d5e153fe400c573384b1327d190493728ec9c237fcfafc";
+      url = "https://packages.edgedb.com/archive/x86_64-apple-darwin.nightly/edgedb-ls-8.0-dev.9807+b06c701.tar.zst";
+      sha256 = "c09a8bf82649358660316ca9cbb4ecd521e23f73bfea40c8af3170516be6e329";
     };
     aarch64-darwin = {
-      url = "https://packages.edgedb.com/archive/aarch64-apple-darwin.nightly/edgedb-ls-8.0-dev.9807+b239d10.tar.zst";
-      sha256 = "ea4f16761a7ff029f5cfb1f649fd015bbc75c00d47479d05e42d75e2b69ff6ff";
+      url = "https://packages.edgedb.com/archive/aarch64-apple-darwin.nightly/edgedb-ls-8.0-dev.9807+3e41f59.tar.zst";
+      sha256 = "78715887c98c5c923d83029d0893f904883ba9a5ce0b19ad05ebbc9321ce8baf";
     };
   };
 }
