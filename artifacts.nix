@@ -67,8 +67,8 @@
       sha256 = "21aa130248e335f9d6f54d4fdc1469a01597c06e3d8ab6454e5933c3e456fd19";
     };
     aarch64-darwin = {
-      url = "https://packages.edgedb.com/archive/aarch64-apple-darwin.nightly/edgedb-ls-8.0-dev.9812+bc2e39a.tar.zst";
-      sha256 = "e422e0ec6168bdcdf16a1ff3ba17093e4882154eeba71fead8fc5e9f912719e2";
+      url = "https://packages.edgedb.com/archive/aarch64-apple-darwin.nightly/edgedb-ls-8.0-dev.9812+edd9e5b.tar.zst";
+      sha256 = "3cc3b9688d53b55a0f75a2d9ef263ab3199c3c6a127b584733d0663e04834485";
     };
   };
 }
